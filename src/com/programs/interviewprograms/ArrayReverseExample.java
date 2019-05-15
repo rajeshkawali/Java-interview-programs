@@ -1,4 +1,4 @@
-package com.programs.interviewPrograms;
+package com.programs.interviewprograms;
 import java.util.Arrays;
 // Java Program To Reverse An Array Without Using An Additional Array
 public class ArrayReverseExample 

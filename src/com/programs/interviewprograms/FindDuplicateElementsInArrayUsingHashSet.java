@@ -1,4 +1,4 @@
-package com.programs.interviewPrograms;
+package com.programs.interviewprograms;
 
 import java.util.HashSet;
 

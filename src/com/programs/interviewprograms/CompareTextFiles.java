@@ -1,4 +1,4 @@
-package com.programs.interviewPrograms;
+package com.programs.interviewprograms;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
