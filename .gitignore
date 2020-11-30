@@ -1,0 +1,15 @@
+### Eclipse ###
+# Covers Eclipse IDE
+
+.classpath
+.project
+.settings/
+.bak
+
+### Maven ###
+target/
+
+**\.classpath
+**\.project
+**\.class
+/bin/
