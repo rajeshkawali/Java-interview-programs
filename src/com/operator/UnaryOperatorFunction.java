@@ -8,7 +8,7 @@ public class UnaryOperatorFunction {
 	public static void main(String[] args) {
 
 		int number = 5;
-		Function<Integer,Integer> sum = j -> j+j;
+		Function<Integer,Integer> sum = (j) -> j+j;
 		System.out.println(sum.apply(number));
 		
 		UnaryOperator<Integer> uo = (i) ->  i + i;
@@ -20,5 +20,6 @@ public class UnaryOperatorFunction {
 		3.LongUnaryOperator
 		*/
 	}
-
 }
+//10
+//10
