@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 public class FilesStream {
 
-	@SuppressWarnings("resource")
+	@SuppressWarnings({ "resource", "rawtypes" })
 	public static void main(String[] args) throws IOException {
 
 		

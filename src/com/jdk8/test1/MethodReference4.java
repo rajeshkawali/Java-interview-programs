@@ -1,6 +1,7 @@
 package com.jdk8.test1;
 
 import java.util.function.BiFunction;
+import java.util.function.BooleanSupplier;
 
 class Arithmetic1 {
 	public static int add(int a, int b) {
