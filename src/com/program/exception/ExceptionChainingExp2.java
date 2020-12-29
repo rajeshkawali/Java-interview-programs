@@ -26,15 +26,15 @@ public class ExceptionChainingExp2 {
 
 		try {
 			test4();
-		} catch (ArithmeticException e) {
+		} catch (ArithmeticException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		System.out.println("3 end");
 	}
 
-	static void test4() {
+	static void test4() throws ClassNotFoundException {
 		System.out.println("test4()");
-
+		Class.forName("");
 		int i = 10 / 0;
 
 		System.out.println("4 end");

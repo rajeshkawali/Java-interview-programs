@@ -5,10 +5,10 @@ public class ExceptionReturn {
 	@SuppressWarnings("finally")
 	static int test(String s) {
 		try {
-			System.exit(0);
+			//System.exit(0);
 			System.out.println("try....");
 			int i = Integer.parseInt(s);
-			return i;
+			return 88;
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 			return 0;
