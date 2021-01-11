@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
  
-//1. IdentityHashMap uses equality operator “==” for comparing keys and values while HashMap uses equals method for comparing keys and values inside Map.
-//2. Since IdentityHashMap doesn’t use equals() its comparatively faster than HashMap for object with expensive equals().
-//3. IdentityHashMap doesn’t require keys to be immutable as it is not relied on equals().
+//1. IdentityHashMap uses equality operator â€œ==â€� for comparing keys and values while HashMap uses equals method for comparing keys and values inside Map.
+//2. Since IdentityHashMap doesnâ€™t use equals() its comparatively faster than HashMap for object with expensive equals().
+//3. IdentityHashMap doesnâ€™t require keys to be immutable as it is not relied on equals().
 //4. IdentityHashMap implements Map, Serializable and Clonable interfaces and extends AbstractMap class.
 //5. 
 //6. 
@@ -28,7 +28,7 @@ public class IdentityHashMapMain
         ihm.put("ihmkey","ihmvalue"); 
         ihm.put(new String("ihmkey"),"ihmvalue1"); 
          
-        // Print Size of HashMap and WeakHashMap Object
+        // Print Size of HashMap and IdentityHashMap Object
         //hm.size() will print 1 since it compares the objects logically
         // and both the keys are same
         System.out.println("Size of HashMap--"+hm.size());

@@ -13,10 +13,20 @@ public class Test {
 			System.out.println();
 		}
 		System.out.println("\n----------------------");
+		for (int i = 0; i <= size; i++) {
+			for (int j = 0; j <= i; j++) {
+				//if(j>=i)
+					System.out.print("*");
+					//System.out.print(j);
+					//System.out.print(i);
+			}
+			System.out.println();
+		}
+		System.out.println("\n----------------------");
 		for (int i = 1; i <= size; i++) {
-			for (int j = size; j >=0; j--) {
-				//if(j<=i)
-				System.out.print(j);
+			for (int j = size; j>=0; j--) {
+				if(j<=i)
+				System.out.print(i);
 			}
 			System.out.println();
 		}

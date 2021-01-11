@@ -1,6 +1,7 @@
 package com.all;
 import java.util.Comparator;
 import java.util.Iterator;
+import java.util.Set;
 import java.util.TreeSet;
 
 // Student Class
@@ -39,7 +40,7 @@ public class MainClass{
         //Instantiating MyComparator
         MyComparator comparator = new MyComparator();
         //Creating TreeSet with 'MyComparator' as Comparator.
-        TreeSet<Student> set = new TreeSet<Student>(comparator);
+        Set<Student> set = new TreeSet<Student>(comparator);
         //Adding elements to TreeSet
         set.add(new Student(121, "Santosh", 85));
         set.add(new Student(231, "Cherry", 71));

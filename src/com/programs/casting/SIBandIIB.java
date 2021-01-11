@@ -33,7 +33,8 @@ public class SIBandIIB {
 		SuperA spr = new SuperA();
 		// ChaildB chld1 = new ChaildB();
 		System.out.println("------Main------");
-		SuperA chld2 = new ChaildB();
+		ChaildB chld1 = new ChaildB();
+		//SuperA chld2 = new ChaildB();
 	}
 
 	static {

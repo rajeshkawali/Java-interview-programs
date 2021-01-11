@@ -68,7 +68,7 @@ public class ComparatorTest {
 		TreeSet<Employee> ts = new TreeSet<Employee>(compare);
 		ts.add(new Employee(3, "rajesh1", 88));
 		ts.add(new Employee(5, "pankaj", 75));
-		ts.add(new Employee(1, "rajesh3", 66));
+		ts.add(new Employee(1, "bajaj", 66));
 		ts.add(new Employee(4, "anil", 42));
 		ts.add(new Employee(2, "rajesh5", 11));
 		

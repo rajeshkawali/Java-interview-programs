@@ -13,9 +13,10 @@ public class QueueMain {
    // 4.remove()-Removes and returns the head of the queue. Throws NoSuchElementException when queue is impty.
    // 5.poll()-Removes and returns the head of the queue. Returns null if queue is empty.
   
-   //6.Null elements are not allowed in the queue. If you try to insert null object into the queue, it throws NullPointerException.
-   //7.Queue can have duplicate elements.
-   //8.Unlike a normal list, queue is not random access. i.e you can’t set or insert or get elements at an arbitrary positions.
+   //6.Null elements are not allowed in the queue. 
+   //7.If you try to insert null object into the queue, it throws NullPointerException.
+   //8.Queue can have duplicate elements.
+   //9.Unlike a normal list, queue is not random access. i.e you can’t set or insert or get elements at an arbitrary positions.
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String[] args) {
