@@ -17,7 +17,7 @@ public class StackMain {
 		// 7.It extends Vector class.
 		// 8.Stack is Synchronized.
 		// 9.class represents a last-in-first-out (LIFO) stack of objects.
-		// 10.Stack class is that it is thread safety. All methods of Stack class are synchronized so that only one thread can execute them at any given time.
+		// 10.Stack class is thread safe. All methods of Stack class are synchronized so that only one thread can execute them at any given time.
 							
 		
 		Stack stack = new Stack();

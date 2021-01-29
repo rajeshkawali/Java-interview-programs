@@ -10,7 +10,7 @@ public class HashMapMain {
 	public static void main(String[] args) {
 
 		// 1.It allows only 1 key as a null and any no of null values.
-		// 2.duplicates are not allowed.
+		// 2.duplicate keys are not allowed.
 		// 3.Insertion order are not preserved.
 		// 4.The default initial capacity (16) and the default load factor (0.75).
 		// 5.when we adding value in HashMap,If that key already exist then old value replaced with new value.

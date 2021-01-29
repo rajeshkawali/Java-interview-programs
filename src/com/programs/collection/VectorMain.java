@@ -17,7 +17,7 @@ public class VectorMain {
 		// 6.If we access index value which is not available in Vector then it return ArrayIndexOutOfBoundsException.
 		// 7.It implements List, Cloneable, Serializable and RandomAccess (Marker interface).It extends AbstractList class.
 		// 8.Vector is better for storing and accessing data.
-		// 9.Vector is Synchronized.
+		// 9.Vector is Synchronized.(only difference between ArrayList and Vector)
 		// 10.Underlying data structure is Resizable-array or Growable array (Dynamically grow-able and shrink-able collection of objects).
 		// 11.Vector class is that it is thread safety. All methods of Vector class are synchronized so that only one thread can execute them at any given time.
 		// 12.Vector class effects the performance of an application as it makes threads to wait for object lock.

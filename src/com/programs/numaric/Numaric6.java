@@ -39,9 +39,18 @@ public class Numaric6 {
 				odd = odd - 2;
 				spaces = spaces + 1;
 			}
-
 		}
-
 	}
-
 }
+/*
+Enter the size :9
+         1
+        210
+       32101
+      4321234
+     543456789
+      6543456
+       76545
+        876
+         0
+*/

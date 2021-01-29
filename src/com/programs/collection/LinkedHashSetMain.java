@@ -14,7 +14,7 @@ public class LinkedHashSetMain {
 		// 4.The default initial capacity (16) and the default load factor (0.75).
 		// 5.Only one difference is, The LinkedHashSet insertion Order are Preserved but not HashSet.
 		// 6.when we adding value in LinkedHashSet,If that element already exist then old element replaced with new element.
-		// 7.HashSet uses HashMap object internally to store it’s elements where as LinkedHashSet uses LinkedHashMap object internally to store and process it’s elements.
+		// 7.HashSet uses HashMap object internally to store it's elements where as LinkedHashSet uses LinkedHashMap object internally to store and process it's elements.
 		// 8.If we access index value which is not available in LinkedHashSet then it return null.
 		// 9.LinkedHashSet underlying data structure is the Hashtable and linked list.
 		LinkedHashSet lhs = new LinkedHashSet();

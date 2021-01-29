@@ -17,7 +17,7 @@ public class ThreadClassMethodsMain {
 		//mt1.start(); //java.lang.IllegalThreadStateException .
 		mt2.start();
 		mt3.start();
-		mt4.run();//fine, but does not start a separate call stack  
+		mt4.run();//fine, but does not start a separate call stack instated it will execute in same stack.
 		
 		System.out.println("main Thread2");
 

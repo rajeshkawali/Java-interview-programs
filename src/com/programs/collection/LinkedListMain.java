@@ -22,6 +22,8 @@ public class LinkedListMain {
 		// 11.LinkedList is better for manipulating data.
 		// 12.Underlying data structure is Doubly Linked list.
 		
+		// 13. Only difference with ArrayList is LL is not having default capacity and it is best for removal/Insertion operation.
+		
 		LinkedList list = new LinkedList();
 		System.out.println("Initial capacity :" + list.size());
 

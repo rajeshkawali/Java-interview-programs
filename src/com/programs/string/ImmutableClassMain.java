@@ -81,9 +81,9 @@ public class ImmutableClassMain {
 		Employee emp = new Employee("Adithya", 34, new Address("Home", "Madhapur", "Hyderabad"));
 		Address address = emp.getAddress();
 		System.out.println(address);
-		address.setAddress("Hi-tech City");
+		address.setAddress("Silicon City");
 		address.setAddressType("Office");
-		address.setCity("Hyderabad");
+		address.setCity("Bangalore");
 		System.out.println(emp.getAddress());
 	}
 }

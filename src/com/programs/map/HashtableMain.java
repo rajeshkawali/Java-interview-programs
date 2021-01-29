@@ -48,6 +48,20 @@ public class HashtableMain {
 		for (String key : ht.keySet()) {
 			System.out.println("key :" + key + "\t value :" +ht.get(key));
 		}
+		System.out.println("------------------------------------------------------");
+		String s1 ="a";
+		Hashtable<String, Integer> ht2 = new Hashtable<String, Integer>();
+		ht2.put(s1, 1);
+		ht2.put("b", 2);
+		ht2.put("c", 3);
+		ht2.put("d", 4);
+		// We have changed s1 value to upper case but we are getting correct value because String is immutable.
+		// If you make any changes with String literal, it will be creating new object in Heap.
+		System.out.println("Changed to upper case s1 = "+s1.toUpperCase());
+		//Object obj = ht2.get("A"); // java.lang.NullPointerException
+		Object obj = ht2.get("a");
+		System.out.println(obj.toString());
+		
 	}
 
 }

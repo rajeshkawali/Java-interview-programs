@@ -1,0 +1,92 @@
+---------------------------------------------------------------------------------------------
+
+Example of Intermediate operations are:-->
+filter(Predicate)
+map(Function)
+flatmap(Function)
+sorted(Comparator)
+distinct()
+limit(long n)
+skip(long n)
+---------------------------------------------------------------------------------------------
+Example of terminal operations are :-->
+forEach
+toArray
+reduce
+collect
+min
+max
+count
+anyMatch
+allMatch
+noneMatch
+findFirst
+findAny
+---------------------------------------------------------------------------------------------
+Difference between Stream’s findFirst() and findAny()?
+findFirst will always return the first element from the stream whereas findAny is allowed to choose any element from the stream.
+findFirst has deterministic behavior whereas findAny is nondeterministic behavior.
+---------------------------------------------------------------------------------------------
+What is predicate function interface?
+Answer:
+Predicate is single argument function which returns true or false. It has test method which returns boolean.
+When we are using filter in above example, we are actually passing Predicate functional interface to it.
+---------------------------------------------------------------------------------------------
+What is consumer function interface?
+Answer:
+Consumer is single argument functional interface which does not return any value.
+When we are using forEach in above example, we are actually passing Consumer functional interface to it.
+---------------------------------------------------------------------------------------------
+What is supplier function interface?
+Answer:
+Supplier is function interface which does not take any parameter but returns the value using get method.
+---------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

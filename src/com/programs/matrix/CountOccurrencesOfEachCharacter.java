@@ -5,10 +5,7 @@ import java.util.HashMap;
 public class CountOccurrencesOfEachCharacter {
 
 	public static void main(String[] args) {
-		
-		
 		characterCount("Java J2EE Java Raj Java Raje Java JSP J2EE");
-
 	}
 
 	static void characterCount(String inputString) {

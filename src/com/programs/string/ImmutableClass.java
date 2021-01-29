@@ -21,12 +21,12 @@ How to Create an immutable class in Java?
 
 
  */
-public final class ImmutableClassExample {
+ final class ImmutableClass {
 	private final String name;
 	private final int regNo;
 	private final Map<String, String> metadata;
 
-	public ImmutableClassExample(String name, int regNo,
+	public ImmutableClass(String name, int regNo,
 				Map<String, String> metadata)
 	{
 		this.name = name;
@@ -55,13 +55,13 @@ public final class ImmutableClassExample {
 }
 
 // Driver class
-class Test {
+ class Test {
 	public static void main(String[] args)
 	{
 		Map<String, String> map = new HashMap<>();
 		map.put("1", "first");
 		map.put("2", "second");
-		ImmutableClassExample s = new ImmutableClassExample("ABC", 101, map);
+		ImmutableClass s = new ImmutableClass("ABC", 101, map);
 		System.out.println(s.getName());
 		System.out.println(s.getRegNo());
 		System.out.println(s.getMetadata());

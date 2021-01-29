@@ -17,16 +17,25 @@ public class Numaric5 {
 				System.out.print(i);
 			}
 			System.out.println();
-			if(i<size/2){
+			if(i<(size/2)+1){
 				odd=odd+2;
 				spaces=spaces-1;
 			}else{
 				odd=odd-2;
 				spaces=spaces+1;
 			}
-			
 		}
-
 	}
-
 }
+/*
+
+Enter the size :7
+       1
+      222
+     33333
+    4444444
+     55555
+      666
+       7
+
+ */

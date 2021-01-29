@@ -8,8 +8,6 @@ public class ConsumerExample1 {
 		Consumer<String> con = s -> System.out.println(s);
 		con.accept("Rajesh");
 		
-		
-		
 		Consumer<String> con2 = s -> System.out.println(s.toUpperCase());
 
 		  Consumer<String> con1 = s -> System.out.println("(" + s + ")");

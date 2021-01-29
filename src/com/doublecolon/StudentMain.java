@@ -6,7 +6,10 @@ public class StudentMain {
 	public static void main(String[] args) {
 
 		//Lambda Expression
-		StudentInterface obj = () -> {Student std = new Student(); return std;};
+		StudentInterface obj = () -> {
+			Student std = new Student(); 
+			return std;
+		};
 		//Student constructor
 		obj.getStudent();
 		

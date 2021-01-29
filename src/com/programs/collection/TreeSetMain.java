@@ -13,7 +13,7 @@ public class TreeSetMain {
 		// 3.Insertion order are not preserved Instead it stores Objects using some Default Natural sorting order.
 		// 4.Iterator returned by TreeSet is of fail-fast nature. That means, If TreeSet is modified after the creation of Iterator object, you will get ConcurrentModificationException.
 		// 5.It allows only Homogeneous Objects (Only TreeSet and TreeMap are allowed Homogeneous objects except this all are allows Heterogeneous Objects). 
-		// 6.TreeSet internally uses TreeMap to store it’s elements.
+		// 6.TreeSet internally uses TreeMap to store it's elements.
 		// 7.It implements NavigableSet, Cloneable, Serializable .It extends AbstractSet class.
 		// 8.TreeSet gives performance of order log(n) for insertion, removal and retrieval operations.
 		// 9.Underlying data structure- it internally uses TreeMap.

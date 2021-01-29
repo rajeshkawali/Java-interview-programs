@@ -21,6 +21,9 @@ public class Date {
 		// 2020
 		int year = date.getYear();
 		System.out.println(year);
+
+		LocalDate currentDate = LocalDate.now();
+		System.out.println(currentDate);
 	}
 
 }

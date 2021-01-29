@@ -12,10 +12,10 @@ public class CopyFileToAnotherFile {
 		FileOutputStream outstream = null;
 
 		try {
-			//File infile = new File("C:\\MyInputFile.txt");
-			//File outfile = new File("C:\\MyOutputFile.txt");
-			File infile = new File("/root/Desktop/newfile.txt");
-			File outfile = new File("/root/Desktop/newfile2.txt");
+			File infile = new File("C:\\MyBackup\\files\\fileInput.txt");
+			File outfile = new File("C:\\MyBackup\\files\\fileOutput.txt");
+			//File infile = new File("/root/Desktop/newfile.txt");
+			//File outfile = new File("/root/Desktop/newfile2.txt");
 
 			instream = new FileInputStream(infile);
 			outstream = new FileOutputStream(outfile);

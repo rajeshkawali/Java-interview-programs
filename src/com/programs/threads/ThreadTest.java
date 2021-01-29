@@ -5,24 +5,25 @@ public class ThreadTest {
 	public static void main(String[] args) {
 
 		/*
-		1.The join() method waits for a thread to die. In other words, it causes the currently running 
-		threads to stop executing until the thread it joins with completes its task.
-		*/
-		
+		 * 1.The join() method waits for a thread to die. In other words, it causes the
+		 * currently running threads to stop executing until the thread it joins with
+		 * completes its task.
+		 */
+
 		// Creating first thread
 		Thread1 t1 = new Thread1();
 		t1.start();
 
 		for (int i = 0; i <= 10; i++) {
-			if(i%2==0){
-				System.out.println("Main Thread="+i);
+			if (i % 2 == 0) {
+				System.out.println("Main Thread=" + i);
 			}
 		}
 
 		// Creating second thread
 		Thread2 t2 = new Thread2();
 		t2.start();
-		
+
 		try {
 			System.out.println("---join1---");
 			t1.join();
@@ -32,7 +33,7 @@ public class ThreadTest {
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}
 	}
 }
 
@@ -40,8 +41,8 @@ class Thread1 extends Thread {
 	@Override
 	public void run() {
 		for (int i = 11; i <= 20; i++) {
-			if(i%2==0){
-				System.out.println("Child Thread1 even="+i);
+			if (i % 2 == 0) {
+				System.out.println("Child Thread1 even=" + i);
 			}
 		}
 	}
@@ -53,8 +54,8 @@ class Thread2 extends Thread {
 	@Override
 	public void run() {
 		for (int i = 21; i <= 30; i++) {
-			if(i%2!=0){
-				System.out.println("Child Thread2 odd="+i);
+			if (i % 2 != 0) {
+				System.out.println("Child Thread2 odd=" + i);
 			}
 		}
 	}
