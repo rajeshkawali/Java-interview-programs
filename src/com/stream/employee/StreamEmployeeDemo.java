@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class TestEmployee {
+public class StreamEmployeeDemo {
 
 	public static void main(String[] args) {
 
