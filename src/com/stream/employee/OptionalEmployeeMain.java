@@ -8,20 +8,20 @@ public class OptionalEmployeeMain {
 	
 	public static List<Employee> getAllEmployee() {
 		List<Employee> employeeList = Arrays.asList(
-				new Employee(1, "Rajesh", 32, "rajesh@gmail.com", Arrays.asList("8169447937", "90955447")),
-				new Employee(2, "Mahesh", 29, "mahesh@gmail.com", Arrays.asList("91445935", "7948559467")),
-				new Employee(3, "Vidya", 27, "vidya@gmail.com", Arrays.asList("869493", "89454")),
-				new Employee(4, "Rajesh", 18, "rajesh@gmail.com", Arrays.asList("47474747", "8946069767")),
-				new Employee(5, "Vikram", 6, "vikram@gmail.com", Arrays.asList("81937", "94068")),
-				new Employee(6, "Keshav", 22, "keshav@gmail.com", Arrays.asList("9164937447", "9478683067")),
-				new Employee(7, "Kiran", 22, "kiran@gmail.com", Arrays.asList("91937447", "947683067")));
+				new Employee(1, "Rajesh", 32, "rajesh@gmail.com", 47000, "software", Arrays.asList("8169447937", "90955447")),
+				new Employee(2, "Mahesh", 29, "mahesh@gmail.com", 7000, "admin", Arrays.asList("91445935", "7948559467")),
+				new Employee(3, "Vidya", 27, "vidya@gmail.com", 7000, "finance", Arrays.asList("869493", "89454")),
+				new Employee(4, "Rajesh", 18, "rajesh@gmail.com", 7000, "admin", Arrays.asList("47474747", "8946069767")),
+				new Employee(5, "Vikram", 6, "vikram@gmail.com", 7000, "software", Arrays.asList("81937", "94068")),
+				new Employee(6, "Keshav", 22, "keshav@gmail.com", 7000, "finance", Arrays.asList("9164937447", "9478683067")),
+				new Employee(7, "Kiran", 22, "kiran@gmail.com", 7000, "software", Arrays.asList("91937447", "947683067")));
 		return employeeList;
 	}
 
 	public static void main(String[] args) {
 		
 		System.out.println("--------------------------------------------------------------------------------");
-		Employee employee = new Employee(1,"Rajesh", 32, "rajesh@gmail.com", Arrays.asList("8169447937", "839409467"));
+		Employee employee = new Employee(1,"Rajesh", 32, "rajesh@gmail.com", 7000, "software", Arrays.asList("8169447937", "839409467"));
 				
 		System.out.println(employee);
 	    //Optional -->A container object which may or may not contain a non-null value. If a value is present, isPresent() will return true and get() will return the value.
@@ -40,7 +40,7 @@ public class OptionalEmployeeMain {
         Optional<String> emailOptional2 = Optional.ofNullable(employee.getEmail());
         System.out.println(emailOptional2); // Optional[rajesh@gmail.com]
 		System.out.println("--------------------------------------------------------------------------------");
-		Employee employee3 = new Employee(1,"Rajesh", 32, null, Arrays.asList("8169447937", "839409467"));
+		Employee employee3 = new Employee(1,"Rajesh", 32, null, 7000,"software",Arrays.asList("8169447937", "839409467"));
 		Optional<String> emailOptional3 = Optional.ofNullable(employee3.getEmail());
 		System.out.println("Not throwing any exception even if present null value: "+emailOptional3);
 		System.out.println("--------------------------------------------------------------------------------");
@@ -50,7 +50,7 @@ public class OptionalEmployeeMain {
 			System.out.println("Value present :"+emailOptional);// Value present :Optional[rajesh@gmail.com]
 		}
 		System.out.println("--------------------------------------------------------------------------------");
-		Employee employee4 = new Employee(1,"Rajesh", 32, null, Arrays.asList("8169447937", "839409467"));
+		Employee employee4 = new Employee(1,"Rajesh", 32, null, 7000,"software", Arrays.asList("8169447937", "839409467"));
 		Optional<String> emailOptional4 = Optional.ofNullable(employee4.getEmail());
 		System.out.println(emailOptional4.orElse("If value of email is null then Print default value"));//orElse()--> takes string 
 		System.out.println("--------------------------------------------------------------------------------");

@@ -3,6 +3,7 @@ package com.stream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PeekSkipStreams {
 
@@ -27,7 +28,13 @@ public class PeekSkipStreams {
 		List<String> val4 =strings.stream().filter(x->x.startsWith("A")).filter(x->x.startsWith("A")).peek(System.out::println).sorted().distinct().collect(Collectors.toList());
 		System.out.println("----------------");
 		System.out.println(val4);
-		
+		System.out.println("----------------");
+		Stream.of("one", "two", "three", "four")
+        .filter(e -> e.length() > 3)
+        .peek(e -> System.out.println("Filtered value: " + e))//This method exists mainly to support debugging
+        .map(String::toUpperCase)
+        .peek(e -> System.out.println("Mapped value: " + e))
+        .collect(Collectors.toList());
 	}
 
 }
@@ -51,4 +58,9 @@ A24
 A15
 ----------------
 [A12, A15, A24, A32, A44]
+----------------
+Filtered value: three
+Mapped value: THREE
+Filtered value: four
+Mapped value: FOUR
 */
