@@ -11,6 +11,7 @@ import java.util.OptionalInt;
 import java.util.Random;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamEmployeeDemo {
@@ -117,8 +118,57 @@ public class StreamEmployeeDemo {
 		//Group by names
 		System.out.println(employeeList.stream().collect(Collectors.groupingBy(e->e.getName())));
 		System.out.println("--------------------------------------------------------------------------------19");
-		
+		int [] number = {2,4,3,1,6,0,5,7,0};
+		// Print 3 min numbers from array
+		IntStream.of(number).distinct().sorted().limit(3).forEach(System.out::println);
 		System.out.println("--------------------------------------------------------------------------------20");
+		//To Count the employee in each department
+		Map<String,Long> empCount = employeeList.stream()
+						.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+		System.out.println(empCount);
+		System.out.println("--------------------------------------------------------------------------------21");
+		//If you have more than 10000 elements in the list then we can use parallel stream to divide the task in multiple threads.
+		Map<String,Long> empCountParalle = employeeList.stream()
+				.parallel()
+				.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+		System.out.println(empCountParalle);
+		System.out.println("--------------------------------------------------------------------------------22");
+		//Print employee highest salary of first 3 employees
+		employeeList.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed())
+		.limit(3)
+		.map(Employee::getName)
+		.forEach(System.out::println);
+		System.out.println("--------------------------------------------------------------------------------23");
+		//convert stream to Map
+		Map<String,String> emp = employeeList.stream()
+				.limit(3)
+				.collect(Collectors.toMap(e-> e.getName(), e->e.getDepartment()));
+		System.out.println(emp);
+		System.out.println("--------------------------------------------------------------------------------24");
+		//To join the names with comma separated 
+		String empNames = employeeList.stream()
+				.map(Employee::getName)
+				.collect(Collectors.joining(", "));
+		System.out.println(empNames);
+		System.out.println("--------------------------------------------------------------------------------25");
+		// This is only for showing the methods in the stream
+		System.out.println(IntStream.of(number).distinct()); //Print unique values
+		System.out.println(IntStream.of(number).sorted()); // Sort
+		System.out.println(IntStream.of(number).limit(3)); // Print only first 3 numbers
+		System.out.println(IntStream.of(number).skip(3)); // Skip first 3 numbers
+		System.out.println(IntStream.of(number).filter(data -> data%2==0)); // Print only even numbers
+		System.out.println(IntStream.of(number).map(num -> num*2)); // Double the number
+		System.out.println(IntStream.of(number).boxed()); //Convert each number to Integer
+		System.out.println(IntStream.of(number).count()); // Count the no of elements
+		System.out.println(IntStream.of(number).sum()); // Add all the elements and return sum
+		System.out.println(IntStream.of(number).average()); // Print the avg of array
+		System.out.println(IntStream.of(number).max()); // Print maximum number in the array
+		System.out.println(IntStream.of(number).min()); // Print minimum number in array
+		System.out.println(IntStream.of(number).unordered()); // Returns an equivalent stream that is unordered. 
+		System.out.println("--------------------------------------------------------------------------------26");
+		IntStream.range(1,5).forEach(System.out::println); // Print 1 to 5 numbers
+		IntStream.range(1,5).toArray(); //collect into array
+		IntStream.range(1,5).boxed().collect(Collectors.toList()); // collect into List
 	}
 }
 /*
@@ -168,13 +218,46 @@ Name: Vikram ==>[Employee [id=5, name=Vikram, age=6, email=vikram@gmail.com, pho
 --------------------------------------------------------------------------------16
 4.25
 --------------------------------------------------------------------------------17
--1553186722
--1256199495
--1146569637
--1099716978
+-1403215214
+-992478650
+1158383422
+1576700893
 --------------------------------------------------------------------------------18
 {Kiran=[Employee [id=7, name=Kiran, age=22, email=kiran@gmail.com, phone=[91937447, 947683067]]], Vidya=[Employee [id=3, name=Vidya, age=27, email=vidya@gmail.com, phone=[869493, 89454]]], Keshav=[Employee [id=6, name=Keshav, age=22, email=keshav@gmail.com, phone=[9164937447, 9478683067]]], Rajesh=[Employee [id=4, name=Rajesh, age=18, email=rajesh@gmail.com, phone=[94937, 8946069767]], Employee [id=1, name=Rajesh, age=32, email=rajesh@gmail.com, phone=[8169447937, 839409467]]], Mahesh=[Employee [id=2, name=Mahesh, age=29, email=mahesh@gmail.com, phone=[91445935, 7948559447]]], Vikram=[Employee [id=5, name=Vikram, age=6, email=vikram@gmail.com, phone=[81937, 94068]]]}
 --------------------------------------------------------------------------------19
+0
+1
+2
 --------------------------------------------------------------------------------20
+{software=2, admin=2, finance=3}
+--------------------------------------------------------------------------------21
+{software=2, admin=2, finance=3}
+--------------------------------------------------------------------------------22
+Kiran
+Rajesh
+Keshav
+--------------------------------------------------------------------------------23
+{Keshav=finance, Rajesh=finance, Vikram=software}
+--------------------------------------------------------------------------------24
+Vikram, Rajesh, Keshav, Kiran, Vidya, Mahesh, Rajesh
+--------------------------------------------------------------------------------25
+java.util.stream.ReferencePipeline$4@25f38edc
+java.util.stream.SortedOps$OfInt@1a86f2f1
+java.util.stream.SliceOps$2@3eb07fd3
+java.util.stream.SliceOps$2@506c589e
+java.util.stream.IntPipeline$9@4b85612c
+java.util.stream.IntPipeline$3@7aec35a
+java.util.stream.IntPipeline$4@67424e82
+9
+28
+OptionalDouble[3.111111111111111]
+OptionalInt[7]
+OptionalInt[0]
+java.util.stream.IntPipeline$8@6e5e91e4
+--------------------------------------------------------------------------------26
+1
+2
+3
+4
 
 */
