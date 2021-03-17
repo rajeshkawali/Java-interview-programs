@@ -24,6 +24,6 @@ class MyServer {
 
 	static void SomeTask(Socket socket) {
 //Some code
-		System.out.println("number=>");
+		System.out.println("number=>"+Thread.currentThread().getName());
 	}
 }
