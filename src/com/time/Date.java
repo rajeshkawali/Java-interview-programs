@@ -27,3 +27,21 @@ public class Date {
 	}
 
 }
+/*
+Immutability: All the classes in the new Date Time API are immutable and good for multithreaded environments.
+
+Separation of Concerns: The new API separates clearly between human readable date time and machine time (unix timestamp). 
+It defines separate classes for Date, Time, DateTime, Timestamp, Timezone etc.
+
+Clarity: The methods are clearly defined and perform the same action in all the classes. For example, 
+to get the current instance we have now() method. There are format() and parse() methods defined in all 
+these classes rather than having a separate class for them.
+All the classes use Factory Pattern and Strategy Pattern for better handling. Once you have used the 
+methods in one of the class, working with other classes won’t be hard.
+
+Utility operations: All the new Date Time API classes comes with methods to perform common tasks, 
+such as plus, minus, format, parsing, getting separate part in date/time etc.
+
+Extendable: The new Date Time API works on ISO-8601 calendar system but we can use it with 
+other non ISO calendars as well.
+*/
